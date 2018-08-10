@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+clearfix {
+  clear: both;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  position: relative;
+  display: inline;
+  max-width: 960px;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+#card {
+  cursor: default;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  border: 2px solid #00BBFF;
+  border-radius: 20px;
+  background-color: #0B024D;
+}
+
+.countDate {
+  cursor: pointer;
+  width: 40%;
+  height: 20%;
+  font-size: 34px;
+  font-family: "微軟正黑體";
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+.show {
+  display: none;
+  align-items: center;
+  height: 50%;
+  color: white;
+  font-family: "微軟正黑體";
+  font-size: 50px;
+}
+
+button {
+  display: none;
+  width: 50%;
+  height: 20%;
+  border: 2px solid #00BBFF;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 50px;
+  color: #0B024D;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #00BBFF;
+  transition: all 0.5s;
+}
