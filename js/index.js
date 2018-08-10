@@ -6,7 +6,7 @@ $('.countDate').change(()=>{
   $('.show').text("")
   $('.countDate').css('display','none')
   $('.show').css('display','flex')
-  let countDate = new Date($('.countDate').val()).getTime()
+  let countDate = new Date($('.countDate').val()+"00:00").getTime()
   timer=window.setInterval(()=>{
     let dateToday=new Date().getTime()
     let totalSeconds=Math.abs(((countDate-28800000)-dateToday)/1000)
@@ -24,11 +24,11 @@ $('.countDate').change(()=>{
       countSeconds="0"+countSeconds.toString()
     }
     if(dateToday<countDate){
-      $('.show').text("已過"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
+      $('.show').text("倒數"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
     }else if(countDate==dateToday){
         clearInterval(timer)
     }else{
-      $('.show').text("倒數"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
+      $('.show').text("已過"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
     }
   $('button').css('display','block')
   },1000)
