@@ -6,7 +6,7 @@ $('.countDate').change(()=>{
   $('.show').text("")
   $('.countDate').css('display','none')
   $('.show').css('display','flex')
-  let countDate = new Date($('.countDate').val()+" 00:00").getTime()
+  let countDate = new Date($('.countDate').val()).getTime()
   timer=window.setInterval(()=>{
     let dateToday=new Date().getTime()
     let totalSeconds=Math.abs(((countDate-28800000)-dateToday)/1000)
