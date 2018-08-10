@@ -24,11 +24,11 @@ $('.countDate').change(()=>{
       countSeconds="0"+countSeconds.toString()
     }
     if(dateToday<countDate){
-      $('.show').text("倒數"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
+      $('.show').text("已過"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
     }else if(countDate==dateToday){
         clearInterval(timer)
     }else{
-      $('.show').text("已過"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
+      $('.show').text("倒數"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
     }
   $('button').css('display','block')
   },1000)
