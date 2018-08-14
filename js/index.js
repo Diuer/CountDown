@@ -23,7 +23,7 @@ $('.countDate').change(()=>{
     if(countSeconds<10){
       countSeconds="0"+countSeconds.toString()
     }
-    if(dateToday<countDate){
+    if(dateToday<countDate-28800000){
       $('.show').text("倒數"+countDays+"天"+countHours+"時"+countMinutes+"分"+countSeconds+"秒")
     }else if(countDate==dateToday){
         clearInterval(timer)
